@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links a:hover {
+      background-color: #575757;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+        @media screen and (max-width: 600px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 50%;
+        background-color: #333;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <a href="#" style="font-weight: bold; color: white;">MySite</a>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">=</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+<h1> This is  my  head page of the first webpage</h1>
+  <h1> this is done by 8919</h1>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
